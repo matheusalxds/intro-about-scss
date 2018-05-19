@@ -11,6 +11,7 @@ $color-text-light: #eee;
 
 $width-button: 150px;
 
+// Mixins
 @mixin clearfix {
   &::after {
     content: "";
@@ -24,6 +25,17 @@ $width-button: 150px;
   text-transform: uppercase;
   color: $color;
 }
+
+// Extend
+%btn-placeholder {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  width: $width-button;
+  @include style-link-text($color-text-light);
+}
+
 
 nav {
   margin: 30px;
@@ -59,15 +71,6 @@ nav {
 
 .buttons {
   float: right;
-}
-
-%btn-placeholder {
-  padding: 10px;
-  display: inline-block;
-  text-align: center;
-  border-radius: 100px;
-  width: $width-button;
-  @include style-link-text($color-text-light);
 }
 
 .btn-main {
